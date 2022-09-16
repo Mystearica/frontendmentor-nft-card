@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+:root {
+  --primary-soft-blue: hsl(215, 51%, 70%);
+  --primary-cyan: hsl(178, 100%, 50%);
+  --primary-cyan-background: hsl(178, 100%, 50%, 0.5);
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dark-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--very-dark-blue-main);
+}
+
+.card-container {
+    display: flex;
+    max-width: 200px;
+    padding: 0.9em;
+    background-color: var(--very-dark-blue-card);
+    border-radius: 10px;
+}
+
+.card {
+    width: 100%;
+}
+
+.image-container {
+    max-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./images/image-equilibrium.jpg");
+    background-size: 100% 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.eye-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 200px;
+    background-color: rgba(0, 255, 247, .0);
+    transition: opacity 1s;
+    opacity: 0;
+    cursor: pointer;
+    background-image: url('./images/icon-view.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.eye-image-container:hover {
+    background-color: rgba(0, 255, 247, .5);
+    opacity: 1;
+}
+
+.info-container {
+    padding-top: 0.5em;
+    width: 100%;
+    transition: color 1s;
+}
+
+.info-container h1 {
+    color: var(--white);
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: color 1s;
+}
+
+.info-container h1:hover {
+    width: auto;
+    color: var(--primary-cyan);
+}
+
+.info-container h3 {
+    color: var(--primary-soft-blue);
+    font-weight: 400;
+    font-size: 0.7em;
+    opacity: 0.6;
+    margin-bottom: 1.5em;
+}
+
+.bitcoin-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.6em;
+    font-weight: 700;
+}
+
+.bitcoin-info div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    font-weight: 600;
+}
+
+.bitcoin-info .eth-text {
+    color: var(--primary-cyan);
+}
+
+.bitcoin-info .clock-text {
+    color: var(--primary-soft-blue);
+    opacity: 0.5;
+}
+
+.bitcoin-info .eth-icon {
+    max-width: 7px;
+    height: auto;
+    padding-right: 0.4em
+}
+
+.bitcoin-info .clock-icon {
+    max-width: 12px;
+    height: auto;
+    padding-right: 0.4em
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--very-dark-blue-line);
+    opacity: 0.7;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    color: var(--white);
+    font-size: 0.6em;
+}
+
+.user-info span {
+    color: var(--primary-soft-blue);
+    opacity: 0.5;
+    font-weight: 400;
+}
+
+.user-info a {
+    color: var(--white);
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 1s;
+}
+
+.user-info a:hover {
+    color: var(--primary-cyan);
+}
+
+.user-info img {
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 1em;
+}
+
+.attribution {
+    margin-top: 3em;
+    color: var(--white);
+    opacity: 0.5;
+}
+
+.attribution a {
+    color: var(--primary-soft-blue);
+}
